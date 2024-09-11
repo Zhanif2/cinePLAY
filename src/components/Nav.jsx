@@ -18,13 +18,34 @@ const Nav = () => {
             <li className="nav__list">
                 <a href="/" className='nav__link underline'>Tv Shows</a>
             </li>
-            <li className="nav__list">
-                <a href="/" className='nav__link underline'>Favourites</a>
-            </li>
             <button className='btn__menu'>
-                <FontAwesomeIcon icon='bars'></FontAwesomeIcon>
+                <FontAwesomeIcon icon='bars'/>
             </button>
+            <li className="nav__icon">
+              <a href="/favourites" className='nav__link glow'>
+              <FontAwesomeIcon icon='fa-heart'/>
+              </a>
+            </li>
         </ul>
+        <div className="menu__backdrop">
+          <button className="btn__menu btn__menu--close">
+            <FontAwesomeIcon icon='times'/>
+          </button>
+          <ul className="menu__links">
+            <li className="menu__list">
+              <a href="/" className='menu__link underline'>Home</a>
+            </li>
+            <li className="menu__list">
+              <a href="/" className='menu__link underline'>Movies</a>
+            </li>
+            <li className="menu__list">
+              <a href="/" className='menu__link underline'>Tv Shows</a>
+            </li>
+            <li className="menu__list">
+              <a href="/" className='menu__link underline'>Favourites</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   )

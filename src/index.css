@@ -13,7 +13,7 @@ html{
 
 
 body{
-  background-color:black;
+  background-color: #13162d;
 }
 
 
@@ -163,6 +163,15 @@ NAV
     font-weight: 600;
   }
 
+  .glow{
+color: #d13dc5;
+transition: all ease 300ms;
+  }
+  .glow:hover{
+    color:#fd2df2;
+    font-size: 16px;
+  }
+
   .underline{
     position: relative;
     color: #fff;
@@ -186,8 +195,6 @@ NAV
     transform: scaleX(0.5);
   }
 
-  
-
   .nav__cursor{
     cursor: not-allowed;
   }
@@ -202,6 +209,7 @@ NAV
     text-align: center;
     font-size: 40px;
     color: #fd2df2;
+    display: none;
   }
 
   .menu--open{
@@ -274,6 +282,10 @@ LANDING PAGE
 
 #landing__page{
   padding: 32px 32px 0 32px;
+}
+
+.landing__page--img{
+height: 500px;
 }
 
 .inner__landing--page{
@@ -468,7 +480,7 @@ MOVIES RESULTS
 }
 
 
-img{
+/*img{
   overflow: hidden;
   border-radius: 30px;
   transition: box-shadow 0.3s ease-in-out;
@@ -483,7 +495,7 @@ img:hover{
 
   transform: scale(0.9);
 }
-
+*/
 
 
 /*
@@ -698,6 +710,8 @@ h1, p{
 .container {
   padding: 82px 48px 82px 48px;
 }
+
+
 
 .browse__btn{
   margin-top: 24px;

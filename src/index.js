@@ -5,8 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faBars)
+library.add(faBars, faHeart, faTimes)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
