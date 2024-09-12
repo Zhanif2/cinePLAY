@@ -34,6 +34,7 @@ section{
 
 .column{
     display: flex;
+    width: 90%;
 }
 
 li,
@@ -186,7 +187,7 @@ transition: all ease 300ms;
   height: 1px;
   bottom: 0;
   left: 0;
-  background:linear-gradient(111.3deg, #57249f 9.6%, #d13dc5 93.6%) ;
+  background:linear-gradient(111.3deg, #f8cc23 9.6%, #d13dc5 93.6%) ;
   transform: scaleX(0);
   transition: transform 0.3s ease;
   }
@@ -284,8 +285,18 @@ LANDING PAGE
   padding: 32px 32px 0 32px;
 }
 
+.landing__container{
+  display: flex;
+  align-items: center;
+}
+
+.landing__btn{
+  margin-top: 10px;
+  padding: 16px;
+  width: 40%;
+}
 .landing__page--img{
-height: 500px;
+  height: 500px;
 }
 
 .inner__landing--page{
@@ -294,105 +305,17 @@ height: 500px;
   justify-content: center;
 }
 
-/*
-
-HEADER
-
-*/
-
-.header_row{
-    width: 50%;
-    margin: 0 auto;
-    padding: 24px 0;
-}
-
-.header__content{
-  width: 40%;
-}
-
-
-.header__logo{
-  margin-left: 32px;
-}
-
-.header__container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding-top: 24px;
-}
-
-.content__wrapper {
-  position: relative;
-  z-index: 10;
-}
-
-.title{
-  text-align: center;
-    letter-spacing: 0.1em;
-    font-size: 52px;
-    margin: 40px;
-}
-
-.search{
-  display: flex;
-}
-
-.searchbar{
-  position: relative;
-}
-
-.header__input{
-  background-color: black;
-  border-radius: 100px;
-  color: white;
-  border: 2px solid #67089e;
-  font-size: 16px;
-  font-weight: 500;
-  transition: border-color 300ms ease;
-  padding: 16px 32px;
-  width: 100%;
-}
-
-
-.header__input:hover{
-border-color: #b026ff;  
-}
-
-.search__btn{
-  position: absolute;
-  right: 0;
-  margin: 10px 14px 0 0;
-  padding: 8px;
-  width: 80px;
-}
-
-.browse__btn{
-  margin-top: 10px;
-  padding: 16px;
-  width: 40%;
-}
-
-.header__btn{
-  text-align: center;
-}
-
 .glow__effect{
   transition: text-shadow 0.3s ease-in-out;
-  text-shadow: 0 0 10px #b026ff, 
-  0 0 20px #67089e, 
-  0 0 30px #b026ff;
+  text-shadow: 0 0 10px #d13dc5, 
+  0 0 20px #d13dc5,
+  0 0 30px #fd2df2
 }
 
 .glow__effect:hover{
-  text-shadow: 0 0 10px #67089e, 
-  0 0 20px #67089e, 
-  0 0 30px #b026ff;
+  text-shadow: 0 0 10px #f8cc23, 
+  0 0 20px #d13dc5, 
+  0 0 30px #d13dc5;
   cursor: pointer;
 }
 
