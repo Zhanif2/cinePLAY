@@ -22,7 +22,7 @@ section{
 }
 
 .container{
-    padding: 82px 0 82px 48px;
+    padding: 20px 0 0 80px;
     margin-top: 82px;
 }
 
@@ -47,8 +47,9 @@ ul, a{
 
 
 
+
 h1 {
-    font-size: 48px;
+    font-size: 50px;
     color: #fff;
     margin-bottom: 20px;
   }
@@ -65,8 +66,8 @@ h1 {
 
   p{
     color: #fff;
-    margin-bottom: 20px;
-    font-size: 18px;
+    margin-bottom: 24px;
+    font-size: 20px;
     line-height: 1.5;
   }
   
@@ -110,15 +111,15 @@ h1 {
     padding: 16px 32px;
     border-radius: 25px;
     border: none;
-    background-color: #b026ff;
-    font-size: 14px;
+    background-color: #d13dc5;
+    font-size: 16px;
     color: #fff;
     font-weight: 600;
     transition: all 300ms ease;
   }
   
   .btn:hover {
-    box-shadow: 0 0 5px #b026ff, 0 0 25px #b026ff, 0 0 50px #b026ff, 0 0 100px #b026ff, 0 0 200px #b026ff;
+    box-shadow: 0 0 5px #fd2df2, 0 0 25px #f8cc23, 0 0 50px #fd2df2;
   }
 
 
@@ -162,6 +163,15 @@ NAV
     font-size: 14px;
     color: #fff;
     font-weight: 600;
+    transition: all ease 300ms;
+  }
+
+  .nav__link:hover{
+    font-size: 16px;
+  }
+
+  .nav__icon:hover{
+    transform: scale(1.2);
   }
 
   .glow{
@@ -290,13 +300,18 @@ LANDING PAGE
   align-items: center;
 }
 
-.landing__btn{
-  margin-top: 10px;
-  padding: 16px;
-  width: 40%;
+.landing__page--contents{
+  margin-top: 40px;
+  padding: 60px;
+}
+
+.landing__page--btn{
+ margin: auto;
 }
 .landing__page--img{
   height: 500px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .inner__landing--page{
