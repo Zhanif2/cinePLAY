@@ -26,6 +26,12 @@ section{
     margin-top: 82px;
 }
 
+
+.section__container{
+  margin-top: 70px;
+  padding: 20px;
+}
+
 .row{
     width: 100%;
     max-width: 2000px;
@@ -52,6 +58,13 @@ h1 {
     font-size: 50px;
     color: #fff;
     margin-bottom: 20px;
+  }
+
+  h2{
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 42px;
+    text-align: center;
   }
 
   h3{
@@ -335,7 +348,42 @@ LANDING PAGE
 }
 
 
+/*
 
+UPCOMING
+
+*/
+
+
+#new{
+  height: 700px;
+  background: linear-gradient(to bottom, #13162d, #d13dc5);
+}
+
+.movies__container, .movies__title--link{
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.movies__poster{
+  width: 300px;
+  margin: 24px;
+  padding: 24px;
+}
+
+.movies__poster--wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.movies__title--link{
+  text-align: center;
+  color: #fff;
+}
 
 
 /*
