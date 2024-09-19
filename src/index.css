@@ -38,6 +38,12 @@ section{
     margin: 0 auto;
 }
 
+.row__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .column{
     display: flex;
     width: 90%;
@@ -108,7 +114,7 @@ h1 {
     cursor: pointer;
   }
 
-  .not__allowed{
+  .no__cursor{
     cursor: not-allowed;
   }
   .logo {
@@ -569,6 +575,45 @@ LOADING STATE
   box-shadow: 0 0 50px #ba68c8;
 }
 
+/*
+
+FOOTER
+
+*/
+.footer__container{
+  padding: 56px 0;
+}
+
+footer{
+  background-color: #d13dc5;
+}
+
+.footer__link,
+.footer__copyright{
+  color: #fff;
+  transition: all 300ms ease;
+}
+
+.footer__link:hover{
+  color: #13162d;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.no__cursor:hover{
+  cursor: not-allowed;
+}
+
+.footer__list{
+  margin: 20px 0 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__link{
+  padding: 0 8px;
+}
 
 @media (max-width: 970px){
   .movie__poster{
