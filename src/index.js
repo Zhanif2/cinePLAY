@@ -7,13 +7,15 @@ import {library} from '@fortawesome/fontawesome-svg-core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-
+import { BrowserRouter } from 'react-router-dom';
 library.add(faBars, faHeart, faTimes)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
     <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

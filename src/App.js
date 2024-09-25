@@ -1,13 +1,14 @@
-import Footer from "./components/Footer";
-import Landing from "./components/Landing";
-import Nav from "./components/Nav";
+import Home from "./pages/Home";
+import Search from "./pages/Search";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
   <div className="App">
-    <Nav/>
-    <Landing/>
-    <Footer/>
+    <Routes>
+      <Route path="/" element= {<Home/>}/>
+      <Route path="/search" element= {<Search/>}/>
+    </Routes>
     </div>
   );
 }
