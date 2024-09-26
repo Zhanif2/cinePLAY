@@ -1,12 +1,12 @@
 import React from 'react';
-import Popular from '../components/Popular';
-import Upcoming from '../components/Upcoming'
+import Search from '../components/Search';
+import Movies from '../components/Movies';
 
 function Main() {
   return (
     <div>
-      <Popular/>
-      <Upcoming/>
+      <Search/>
+      <Movies/>
     </div>
   )
 }
