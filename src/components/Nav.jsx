@@ -13,10 +13,10 @@ const Nav = () => {
                 <a href="/" className='nav__link underline'>Home</a>
             </li>
             <li className="nav__list">
-                <a href="/" className='nav__link underline'>Movies</a>
+                <a href="/main" className='nav__link underline'>Movies</a>
             </li>
             <li className="nav__list">
-                <a href="/" className='nav__link underline'>Tv Shows</a>
+                <a href="/main" className='nav__link underline'>Tv Shows</a>
             </li>
             <button className='btn__menu'>
                 <FontAwesomeIcon icon='bars'/>
