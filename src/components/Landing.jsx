@@ -16,7 +16,7 @@ function Landing() {
               Explore CinePLAY's wide selection of films, from blockbusters to
               hidden gems. Your next movie adventure starts here!
             </p>
-            <button className="btn landing__page--btn" onClick={() => navigate('/Search')}>Explore now</button>
+            <button className="btn landing__page--btn" onClick={() => navigate('/Main')}>Explore now</button>
           </div>
           <div className="img">
             <img src={lp} alt="" className="landing__page--img" />

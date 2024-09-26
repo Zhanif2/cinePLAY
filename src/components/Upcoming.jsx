@@ -12,6 +12,8 @@ function Upcoming() {
           <MoviePoster/>
           <MoviePoster/>
           <MoviePoster/>
+          <MoviePoster/>
+          <MoviePoster/>
         </div>
       </div>
       </div>

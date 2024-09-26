@@ -6,8 +6,10 @@ function Popular() {
     <section id="new">
         <div className="container section__container">
       <div className="row">
-        <h2 className="section__title text__decor">Popular</h2>
+        <h2 className="section__title">Popular</h2>
         <div className="movies__container">
+          <MoviePoster/>
+          <MoviePoster/>
           <MoviePoster/>
           <MoviePoster/>
           <MoviePoster/>
