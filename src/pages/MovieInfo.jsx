@@ -1,10 +1,10 @@
 import React from 'react'
 
-function MovieInfo() {
+const MovieInfo = () => {
   return (
-    <div>
-      MovieInfo
-    </div>
+    <>
+    sadsfs\
+    </>
   )
 }
 

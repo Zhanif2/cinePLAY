@@ -1,21 +1,26 @@
 import React from "react";
 import poster from "../assets/sample__movie--poster.jpg";
+import { Link } from "react-router-dom";
 
-function MoviePoster() {
+const MoviePoster = ({movie}) => {
   return (
     <div className="movie">
-      <a href="">
+      <Link to="/movie-info" href="">
         <figure className="movies__poster--wrapper">
-          <img src={poster} alt="" className="movies__poster" />
+        <img 
+            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
+            alt={movie.title} 
+            className="movies__poster" 
+          />
         </figure>
-      </a>
+      </Link>
       <div className="movies__title">
-        <a href="" className="movies__title--link">
-          Avengers: Endgame
-        </a>
+        <Link to="/movie-info" className="movies__title--link">
+          {movie.title}
+        </Link>
       </div>
     </div>
-  );
+  )
 }
 
-export default MoviePoster;
+export default MoviePoster

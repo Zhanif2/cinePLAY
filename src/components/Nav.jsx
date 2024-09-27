@@ -3,7 +3,7 @@ import React from 'react'
 import logo from '../assets/logo.png'
 const Nav = () => {
   return (
-    <nav>
+    <>
       <div className="nav__container">
         <a href="/">
         <img src={logo} alt="" className='logo no__transition'/>
@@ -13,10 +13,10 @@ const Nav = () => {
                 <a href="/" className='nav__link underline'>Home</a>
             </li>
             <li className="nav__list">
-                <a href="/main" className='nav__link underline'>Movies</a>
+                <a href="/main" className='nav__link underline'>Popular</a>
             </li>
             <li className="nav__list">
-                <a href="/main" className='nav__link underline'>Tv Shows</a>
+                <a href="" className='nav__link underline no__cursor'>Contact</a>
             </li>
             <button className='btn__menu'>
                 <FontAwesomeIcon icon='bars'/>
@@ -36,10 +36,10 @@ const Nav = () => {
               <a href="/" className='menu__link underline'>Home</a>
             </li>
             <li className="menu__list">
-              <a href="/" className='menu__link underline'>Movies</a>
+              <a href="/main" className='menu__link underline'>Popular</a>
             </li>
             <li className="menu__list">
-              <a href="/" className='menu__link underline'>Tv Shows</a>
+              <a href="" className='menu__link underline no__cursor'>Contact</a>
             </li>
             <li className="menu__list">
               <a href="/" className='menu__link underline'>Favourites</a>
@@ -47,7 +47,7 @@ const Nav = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    </>
   )
 }
 
