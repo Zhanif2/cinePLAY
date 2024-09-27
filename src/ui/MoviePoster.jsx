@@ -10,7 +10,7 @@ function MoviePoster() {
         </figure>
       </a>
       <div className="movies__title">
-        <a href="/" className="movies__title--link">
+        <a href="" className="movies__title--link">
           Avengers: Endgame
         </a>
       </div>

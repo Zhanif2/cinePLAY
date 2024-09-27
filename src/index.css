@@ -477,8 +477,27 @@ MOVIE RESULTS
 }
 
 .movies__title--link {
+  position: relative;
   text-align: center;
   color: #fff;
+  transition: all ease 300ms;
+}
+
+.movies__title--link:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #b880e4;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.movies__title--link:hover::before {
+  transform: scaleX(1);
 }
 
 /*
@@ -612,14 +631,28 @@ footer {
 .footer__copyright {
   color: #fff;
   transition: all 300ms ease;
+  position: relative;
 }
 
-.footer__link:hover {
-  color: #13162d;
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: underline;
+
+.footer__link:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 85%;
+  height: 2px;
+  bottom: 0;
+  left: 1;
+  background-color: #13162d;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
+
+.footer__link:hover::before {
+  transform: scaleX(1);
+}
+
+
 
 .no__cursor:hover {
   cursor: not-allowed;
