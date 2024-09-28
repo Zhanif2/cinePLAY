@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Search = ({searchTerm, setSearchTerm, onSearch}) => {
  
@@ -7,7 +8,9 @@ const Search = ({searchTerm, setSearchTerm, onSearch}) => {
     <div className='row'>
     <div className='search__container'>
         <div className="content__wrapper">
+          <Link to="/Main">
             <h1 className="title glow__effect">Browse Movies</h1>
+            </Link>
             <div className="searchbar search">
                 <input 
                 id="movie__search" 

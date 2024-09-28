@@ -7,6 +7,7 @@ import Loading from "../components/Loading";
 const Main = () => {
   const [movieList, setMovieList] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [loading, setLoading] = useState(false);
 
   function onSearch() {
     fetchMovies(searchTerm);
@@ -14,18 +15,18 @@ const Main = () => {
   }
 
   async function fetchMovies(search) {
+    setLoading(true)
     const { data } = await axios.get(
-      search ?
-      `https://api.themoviedb.org/3/search/movie?api_key=09dc28db888e1d72ae7b845dad32eb2c&query=${search}`
-      : `https://api.themoviedb.org/3/movie/popular?api_key=09dc28db888e1d72ae7b845dad32eb2c`
+      search
+        ? `https://api.themoviedb.org/3/search/movie?api_key=09dc28db888e1d72ae7b845dad32eb2c&query=${search}`
+        : `https://api.themoviedb.org/3/movie/popular?api_key=09dc28db888e1d72ae7b845dad32eb2c`
     );
     const filteredMovies = data.results.filter(
-      movie => movie && movie.title && movie.poster_path
-    )
-    setMovieList(filteredMovies)
+      (movie) => movie && movie.title && movie.poster_path
+    );
+    setMovieList(filteredMovies);
+    setLoading(false);
   }
-
- 
 
   useEffect(() => {
     fetchMovies();
@@ -38,7 +39,9 @@ const Main = () => {
         setSearchTerm={setSearchTerm}
         onSearch={onSearch}
       />
-      <MovieResults movies={movieList} />
+      {loading ? 
+      <Loading /> : 
+      <MovieResults movies={movieList} />}
     </>
   );
 };
