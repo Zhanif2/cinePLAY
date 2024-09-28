@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Main from "./pages/Main";
 import MovieInfo from "./pages/MovieInfo";
 import React from "react";
+import Favourites from "./pages/Favourites";
 
 function App() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/main" element={<Main />} />
             <Route path="/movie/:id" element={<MovieInfo />} />
+            <Route path="/favourites" element={<Favourites />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>

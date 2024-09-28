@@ -450,17 +450,6 @@ border-color: #f8cc23;
 }
 
 
-/* 
-
-MAIN
-
-*/
-
-
-
-
-
-
 /*
 
 MOVIE RESULTS
@@ -562,6 +551,22 @@ FILTER
 }
 
 
+/*
+
+FAVOURITES
+
+*/
+
+.favourites__container{
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 24px;
+}
 /*
 
 LOADING STATE
@@ -667,6 +672,10 @@ footer {
   position: relative;
 }
 
+
+.footer__link{
+  cursor: pointer;
+}
 
 .footer__link:before {
   content: "";

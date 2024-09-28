@@ -8,8 +8,7 @@ function Footer() {
             <div className="footer__list">
                 <div className="footer__link">Home</div>
                 <div className="footer__link no__cursor">About</div>
-                <div className="footer__link">Movies</div>
-                <div className="footer__link">Tv Shows</div>
+                <div className="footer__link">Popular</div>
                 <div className="footer__link">Favourites</div>
                 <div className="footer__link no__cursor">Contact</div>
             </div>

@@ -38,7 +38,6 @@ const Main = () => {
         setSearchTerm={setSearchTerm}
         onSearch={onSearch}
       />
-      
       <MovieResults movies={movieList} />
     </>
   );
