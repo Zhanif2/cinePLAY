@@ -38,9 +38,6 @@ const MoviePoster = ({movie}) => {
           {movie.title}
         </Link>
       </div>
-      <div className="movies__title">
-        {movie.release_date}
-      </div>
     </div>
   )
 }

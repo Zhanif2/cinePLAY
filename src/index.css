@@ -487,7 +487,8 @@ MOVIE RESULTS
   text-align: center;
   font-size: 14px;
   margin: 20px;
-  padding-bottom: 32px;
+  cursor: pointer;
+
 }
 
 .movies__title--link {

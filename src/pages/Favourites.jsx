@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import mov from '../assets/sample__movie--poster.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 const Favourites = () => {
   const [isFavourite, setIsFavourite] = useState(false);
@@ -14,6 +15,7 @@ const Favourites = () => {
     <div className='favourites__container'>
             <h1 className="title glow__effect">Favourites</h1>
             <div className="movie">
+      <Link to={`/movie-info/`} >
               <figure className="movie__poster--wrapper">
                 <img src={mov} alt="" className="movies__poster" />
                 <div className="overlay favourites__overlay">
@@ -28,10 +30,15 @@ const Favourites = () => {
           </div>
                 </div>
               </figure>
+              </Link>
               <div className="movies__title">
+              <Link to={`/movie-info/`}>
+
                 <div className="movies__title--link">
                   Avengers
                 </div>
+              </Link>
+
               </div>
             </div>
             </div>
