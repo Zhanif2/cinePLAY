@@ -1,30 +1,31 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom'
 const Nav = () => {
   return (
     <>
       <div className="nav__container">
-        <a href="/">
+        <Link to="/">
         <img src={logo} alt="" className='logo no__transition'/>
-        </a>
+        </Link>
         <ul className='nav__links'>
             <li className="nav__list">
-                <a href="/" className='nav__link underline'>Home</a>
+                <Link to="/" className='nav__link underline'>Home</Link>
             </li>
             <li className="nav__list">
-                <a href="/main" className='nav__link underline'>Popular</a>
+                <Link to="/Main" className='nav__link underline'>Popular</Link>
             </li>
             <li className="nav__list">
-                <a href="" className='nav__link underline no__cursor'>Contact</a>
+                <Link to="" className='nav__link underline no__cursor'>Contact</Link>
             </li>
             <button className='btn__menu'>
                 <FontAwesomeIcon icon='bars'/>
             </button>
             <li className="nav__icon">
-              <a href="/favourites" className='nav__link glow'>
+              <Link to="/favourites" className='nav__link glow'>
               <FontAwesomeIcon icon='fa-heart'/>
-              </a>
+              </Link>
             </li>
         </ul>
         <div className="menu__backdrop">
@@ -33,16 +34,16 @@ const Nav = () => {
           </button>
           <ul className="menu__links">
             <li className="menu__list">
-              <a href="/" className='menu__link underline'>Home</a>
+              <Link to="/" className='menu__link underline'>Home</Link>
             </li>
             <li className="menu__list">
-              <a href="/main" className='menu__link underline'>Popular</a>
+              <Link to="/main" className='menu__link underline'>Popular</Link>
             </li>
             <li className="menu__list">
-              <a href="" className='menu__link underline no__cursor'>Contact</a>
+              <Link to="" className='menu__link underline no__cursor'>Contact</Link>
             </li>
             <li className="menu__list">
-              <a href="/" className='menu__link underline'>Favourites</a>
+              <Link to="/favourites" className='menu__link underline'>Favourites</Link>
             </li>
           </ul>
         </div>

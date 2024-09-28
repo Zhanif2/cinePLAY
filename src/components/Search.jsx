@@ -25,6 +25,7 @@ const Search = ({searchTerm, setSearchTerm, onSearch}) => {
                 className='btn search__btn main__btn'
                 onClick={() => onSearch()}/>
             </div>
+            
         </div>
     </div>
 </div>

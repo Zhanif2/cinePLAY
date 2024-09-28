@@ -24,7 +24,7 @@ section {
 }
 
 .section__container {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 20px;
 }
 
@@ -537,7 +537,7 @@ MOVIE RESULTS
 .heart__icon {
   cursor: pointer;
   transition: transform 0.3s ease;
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .heart__icon:hover {
@@ -561,7 +561,7 @@ FILTER
   display: flex;
   justify-content: end;
   align-items: center;
-  padding: 48px;
+  padding: 0 100px 0 0;
 }
 
 .filter__container {
@@ -569,13 +569,19 @@ FILTER
 }
 
 .filter {
-  background-color: #b026ff;
+  background-color: #d13dc5;
   color: white;
   border: none;
   border-radius: 25px;
   padding: 16px;
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
+
+}
+
+.filter__content{
+  cursor: pointer;
 }
 
 /*
