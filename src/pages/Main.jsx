@@ -15,16 +15,6 @@ const Main = () => {
   }
 
   
-  function filterMovies(movies, filter) {
-    let filteredMovies = [...movies]; 
-    if (filter === 'OLD_TO_NEW') {
-      filteredMovies.sort((a, b) => b.Year - a.Year); 
-    } else if (filter === 'NEW_TO_OLD') {
-      filteredMovies.sort((a, b) => a.Year - b.Year); 
-    }
-    return filteredMovies; 
-  }
-
   async function fetchMovies(search = '') {
     setLoading(true);
     const { data } = await axios.get(
@@ -32,6 +22,8 @@ const Main = () => {
         ? `https://api.themoviedb.org/3/search/movie?api_key=09dc28db888e1d72ae7b845dad32eb2c&query=${search}`
         : `https://api.themoviedb.org/3/movie/popular?api_key=09dc28db888e1d72ae7b845dad32eb2c`
     );
+
+    
     
     const filteredMovies = data.results.filter(
       (movie) => movie && movie.title && movie.poster_path && movie.release_date
@@ -43,9 +35,28 @@ const Main = () => {
     setLoading(false); 
   }
 
+  function filterMovies(movies, filter) {
+    let filteredMovies = [...movies]; 
+    if (filter === 'OLD_TO_NEW') {
+      filteredMovies.sort((a, b) => a.Year - b.Year); 
+    } else if (filter === 'NEW_TO_OLD') {
+      filteredMovies.sort((a, b) => b.Year - a.Year); 
+    }
+    return filteredMovies; 
+  }
+
   useEffect(() => {
     fetchMovies(); 
   }, []);
+
+  useEffect(() => {
+    if (filter !== 'DEFAULT') {
+      setLoading(true); 
+      const sortedMovies = filterMovies(movieList, filter);
+      setMovieList(sortedMovies); 
+      setLoading(false); 
+    }
+  }, [filter, movieList]);
 
   return (
     <>

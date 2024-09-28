@@ -12,7 +12,7 @@ const MoviePoster = ({movie}) => {
 
   return (
     <div className="movie">
-      <Link to="/movie-info" href="">
+      <Link to={`/movie-info/${movie.id}`} >
         <figure className="movies__poster--wrapper">
         <img 
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
@@ -34,7 +34,7 @@ const MoviePoster = ({movie}) => {
        
       </Link>
       <div className="movies__title">
-        <Link to="/movie-info" className="movies__title--link">
+        <Link to={`/movie-info/${movie.id}`} className="movies__title--link">
           {movie.title}
         </Link>
       </div>
