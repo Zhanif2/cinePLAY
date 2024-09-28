@@ -1,8 +1,15 @@
-import React from "react";
-import poster from "../assets/sample__movie--poster.jpg";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MoviePoster = ({movie}) => {
+  const [isFavourite, setIsFavourite] = useState(false);
+
+  const toggleFavourite = (e) => {
+    e.preventDefault();
+    setIsFavourite(!isFavourite);
+  }
+
   return (
     <div className="movie">
       <Link to="/movie-info" href="">
@@ -12,7 +19,19 @@ const MoviePoster = ({movie}) => {
             alt={movie.title} 
             className="movies__poster" 
           />
+           <div className="overlay">
+          <div onClick={toggleFavourite} className="heart__icon">
+            {
+              isFavourite ? (
+                <FontAwesomeIcon icon={'heart'} className="colored__heart"/> 
+                ):(
+                  <FontAwesomeIcon icon={['far', 'heart']} className="reg__heart" />
+                )
+            }
+          </div>
+        </div>
         </figure>
+       
       </Link>
       <div className="movies__title">
         <Link to="/movie-info" className="movies__title--link">

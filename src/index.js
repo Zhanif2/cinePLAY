@@ -5,11 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as faSolidHeart } from '@fortawesome/free-solid-svg-icons';  // Solid heart
+import { faHeart as faRegularHeart } from '@fortawesome/free-regular-svg-icons';  // Regular heart
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { BrowserRouter } from 'react-router-dom';
-library.add(faBars, faHeart, faTimes, faSearch)
+library.add(faBars, faSolidHeart, faTimes, faSearch, faRegularHeart)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
