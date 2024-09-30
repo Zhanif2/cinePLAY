@@ -542,7 +542,7 @@ MOVIE RESULTS
 }
 
 .heart__icon:hover {
-  transform: scale(1.1);  /* Slight grow effect on hover */
+  transform: scale(1.1);  
 }
 
 .reg__heart, .colored__heart{
@@ -603,6 +603,73 @@ FAVOURITES
 }
 .favourites__overlay{
   height: 80%;
+}
+
+
+
+/*
+
+MOVIE INFO
+
+*/
+
+
+#movies__body{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#movies__main{
+  flex: 1;
+}
+
+
+.movies__container{
+  padding: 32px 0;
+}
+.movie__selected--top {
+  padding: 0 24px;
+  margin-bottom: 8px;
+  font-size: 32px;
+  color: #242424;
+  display: flex;
+  align-items: center;
+}
+
+.movie__link{
+  color: #d13dc5;
+  font-size:24px;
+}
+
+.movie__selected{
+  display: flex;
+}
+
+.movie__selected--figure{
+  width: 40%;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie__selected--img{
+  max-height: 500px;
+  width: auto;
+  max-width: 100%;
+}
+
+.movie__selected--description{
+  width: 60%;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info{
+  margin-bottom: 8px;
 }
 
 /*
@@ -694,7 +761,7 @@ footer {
   left: 1;
   background-color: #13162d;
   transform: scaleX(0);
-  transition: transform 0.3s ease;
+  transition: transform 300ms ease;
 }
 
 .footer__link:hover::before {
@@ -718,7 +785,13 @@ footer {
 
 
 
+/* 
 
+
+MEDIA QUERIES
+
+
+*/
 
 @media (max-width: 970px) {
   .movie__poster {

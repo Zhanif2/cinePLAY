@@ -9,8 +9,9 @@ import { faHeart as faSolidHeart } from '@fortawesome/free-solid-svg-icons';  //
 import { faHeart as faRegularHeart } from '@fortawesome/free-regular-svg-icons';  // Regular heart
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { BrowserRouter } from 'react-router-dom';
-library.add(faBars, faSolidHeart, faTimes, faSearch, faRegularHeart)
+library.add(faBars, faSolidHeart, faTimes, faSearch, faRegularHeart, faArrowLeft)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

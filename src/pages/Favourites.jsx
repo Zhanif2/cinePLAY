@@ -32,7 +32,7 @@ const Favourites = () => {
               </figure>
               </Link>
               <div className="movies__title">
-              <Link to={`/movie-info/`}>
+              <Link to={`/movie-info/movieid`}>
 
                 <div className="movies__title--link">
                   Avengers

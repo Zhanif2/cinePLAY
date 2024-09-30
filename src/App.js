@@ -21,10 +21,10 @@ function App() {
           timeout={300} 
         >
           <Routes location={location}>
-            <Route path="/" element={<Home />} />
-            <Route path="/main" element={<Main />} />
-            <Route path="/movie/:id" element={<MovieInfo />} />
-            <Route path="/favourites" element={<Favourites />} />
+            <Route path="/" element={<Home/>} />
+            <Route path="/main" element={<Main/>} />
+            <Route path="/movie-info/:id" element={<MovieInfo/>} />
+            <Route path="/favourites" element={<Favourites/>} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>

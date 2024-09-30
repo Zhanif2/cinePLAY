@@ -17,7 +17,7 @@ const Nav = () => {
                 <Link to="/Main" className='nav__link underline'>Popular</Link>
             </li>
             <li className="nav__list">
-                <Link to="" className='nav__link underline no__cursor'>Contact</Link>
+                <a href="" className='nav__link underline no__cursor'>Contact</a>
             </li>
             <button className='btn__menu'>
                 <FontAwesomeIcon icon='bars'/>
@@ -40,7 +40,7 @@ const Nav = () => {
               <Link to="/main" className='menu__link underline'>Popular</Link>
             </li>
             <li className="menu__list">
-              <Link to="" className='menu__link underline no__cursor'>Contact</Link>
+              <a href="" className='menu__link underline no__cursor'>Contact</a>
             </li>
             <li className="menu__list">
               <Link to="/favourites" className='menu__link underline'>Favourites</Link>
