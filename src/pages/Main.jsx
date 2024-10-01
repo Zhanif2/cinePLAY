@@ -14,7 +14,6 @@ const Main = () => {
     fetchMovies(searchTerm);
   }
 
-  
   async function fetchMovies(search = '') {
     setLoading(true);
     const { data } = await axios.get(
@@ -23,38 +22,35 @@ const Main = () => {
         : `https://api.themoviedb.org/3/movie/popular?api_key=09dc28db888e1d72ae7b845dad32eb2c`
     );
 
-    
-    
     const filteredMovies = data.results.filter(
       (movie) => movie && movie.title && movie.poster_path && movie.release_date
-    ).map(movie => ({ ...movie, Year: new Date(movie.release_date).getFullYear() })); 
+    ).map(movie => ({ ...movie, Year: new Date(movie.release_date).getFullYear() }));
 
     const sortedMovies = filterMovies(filteredMovies, filter);
-    setMovieList(sortedMovies); 
-
-    setLoading(false); 
+    setMovieList(sortedMovies);
+    setLoading(false);
   }
 
   function filterMovies(movies, filter) {
-    let filteredMovies = [...movies]; 
+    let filteredMovies = [...movies];
     if (filter === 'OLD_TO_NEW') {
-      filteredMovies.sort((a, b) => a.Year - b.Year); 
+      filteredMovies.sort((a, b) => a.Year - b.Year);
     } else if (filter === 'NEW_TO_OLD') {
-      filteredMovies.sort((a, b) => b.Year - a.Year); 
+      filteredMovies.sort((a, b) => b.Year - a.Year);
     }
-    return filteredMovies; 
+    return filteredMovies;
   }
 
   useEffect(() => {
-    fetchMovies(); 
+    fetchMovies();
   }, []);
 
   useEffect(() => {
     if (filter !== 'DEFAULT') {
-      setLoading(true); 
+      setLoading(true);
       const sortedMovies = filterMovies(movieList, filter);
-      setMovieList(sortedMovies); 
-      setLoading(false); 
+      setMovieList(sortedMovies);
+      setLoading(false);
     }
   }, [filter, movieList]);
 
@@ -72,8 +68,8 @@ const Main = () => {
             id="movieFilter"
             defaultValue='DEFAULT'
             onChange={(event) => {
-              setFilter(event.target.value); 
-              fetchMovies(searchTerm); 
+              setFilter(event.target.value);
+              fetchMovies(searchTerm);
             }}
           >
             <option className="filter__content" value="DEFAULT" disabled>Sort</option>

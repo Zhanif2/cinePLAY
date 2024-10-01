@@ -488,6 +488,7 @@ MOVIE RESULTS
   font-size: 14px;
   margin: 20px;
   cursor: pointer;
+  color: #fff;
 
 }
 
@@ -646,6 +647,22 @@ MOVIE INFO
   display: flex;
 }
 
+.movie__selected--title{
+  font-size: 42px;
+  color: #d13dc5;
+  margin-bottom: 38px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.movie__selected--head{
+  margin: 0;
+  font-weight: bold;
+  color: #d13dc5;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
 .movie__selected--figure{
   width: 40%;
   padding: 16px 32px;
@@ -653,6 +670,7 @@ MOVIE INFO
   justify-content: center;
   align-items: center;
 }
+
 
 .movie__selected--img{
   max-height: 500px;
@@ -670,6 +688,23 @@ MOVIE INFO
 
 .info{
   margin-bottom: 8px;
+}
+
+.decription__contents
+{
+  padding: 24px;
+}
+
+.movie__selected--text{
+  font-size: 20px;
+  font-weight: 100;
+  color: #fff;
+  text-align: left;
+  margin: 8px 0 38px 0;
+}
+
+.movie__info--btn{
+  margin-top: 8px;
 }
 
 /*

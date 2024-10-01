@@ -10,13 +10,13 @@ import Favourites from "./pages/Favourites";
 
 function App() {
   const location = useLocation();
-
+  
   return (
     <>
       <Nav />
       <TransitionGroup>
         <CSSTransition
-          key={location.key} 
+        key={location.key}
           classNames="fade" 
           timeout={300} 
         >
