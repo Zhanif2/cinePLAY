@@ -17,7 +17,7 @@ const Favourites = () => {
             <div className="movie">
       <Link to={`/movie-info/`} >
               <figure className="movie__poster--wrapper">
-                <img src={mov} alt="" className="movies__poster" />
+                <img  alt="" className="movies__poster" />
                 <div className="overlay favourites__overlay">
                 <div onClick={toggleFavourite} className="heart__icon">
             {
@@ -35,7 +35,7 @@ const Favourites = () => {
               <Link to={`/movie-info/movieid`}>
 
                 <div className="movies__title--link">
-                  Avengers
+                 
                 </div>
               </Link>
 

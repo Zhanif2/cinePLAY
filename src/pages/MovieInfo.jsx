@@ -1,18 +1,23 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
+import Favourites from "./Favourites";
 
-const MovieInfo = () => {
+const MovieInfo = ({ addToFavourites, favourites }) => {
   const location = useLocation();
-  const { movie } = location.state || {}; // Get movie data from state
-
+  const { movie } = location.state || {};
   if (!movie) {
     console.log("No movie data available");
-    return <p>Movie not found.</p>; // Handle case where movie data is not passed
+    return <p>Movie not found.</p>;
   }
 
-  console.log("movie", movie);
+  function addMovieToFavourites(movie) {
+    addToFavourites(movie);
+  }
 
+  function movieExistInFavourites(){
+   return favourites.some(favMovie => +favMovie.id === +movie.id);
+  }
   return (
     <>
       <div id="movies__body">
@@ -38,7 +43,9 @@ const MovieInfo = () => {
                   <div className="movie__selected--title">{movie.title}</div>
                   <div className="movie__selected--head">
                     Overview:
-                    <div className="movie__selected--text">{movie.overview}</div>
+                    <div className="movie__selected--text">
+                      {movie.overview}
+                    </div>
                   </div>
                   <div className="movie__selected--head">
                     Release Date:
@@ -52,7 +59,18 @@ const MovieInfo = () => {
                       {movie.vote_average}
                     </div>
                   </div>
-                  <button className="movie__info--btn btn">Add to Favourites</button>
+                  {movieExistInFavourites() ? (
+                    <button className="movie__info--btn btn">
+                      View Favourites{" "}
+                    </button>
+                  ) : (
+                    <button
+                      className="movie__info--btn btn"
+                      onClick={() => addMovieToFavourites(movie)}
+                    >
+                      Add to Favourites
+                    </button>
+                  )}
                 </div>
               </div>
             </div>

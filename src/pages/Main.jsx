@@ -4,7 +4,7 @@ import MovieResults from "../components/MovieResults";
 import axios from "axios";
 import Loading from "../components/Loading";
 
-const Main = () => {
+const Main = ({addToFavourites, favourites}) => {
   const [movieList, setMovieList] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(false);
@@ -54,6 +54,13 @@ const Main = () => {
     }
   }, [filter, movieList]);
 
+
+  const handleAddToFavourites = (movie) => {
+    // Prevent adding duplicates
+    if (!favourites.some(favMovie => favMovie.id === movie.id)) {
+        addToFavourites(movie);
+    }
+};
   return (
     <>
       <Search
@@ -80,7 +87,7 @@ const Main = () => {
       </div>
       {loading ? 
         <Loading /> : 
-        <MovieResults movies={movieList} />}
+        <MovieResults movies={movieList}  addToFavourites={addToFavourites} favourites={favourites}/>}
     </>
   );
 };

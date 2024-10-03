@@ -1,7 +1,7 @@
 import React from "react";
 import MoviePoster from "../ui/MoviePoster";
 
-const MovieResults = ({ movies, loading }) => {
+const MovieResults = ({ movies, loading, addToFavourites, favourites }) => {
   return (
     <section id="new">
       <div className="container section__container">
@@ -18,7 +18,7 @@ const MovieResults = ({ movies, loading }) => {
             ) : (
               movies.length > 0 ? (
                 movies.slice(0, 12).map((movie) => (
-                  <MoviePoster key={movie.id} movie={movie} />
+                  <MoviePoster key={movie.id} movie={movie} addToFavourites={addToFavourites} favourites={favourites}/>
                 ))
               ) : (
                 <p>No movies found.</p>

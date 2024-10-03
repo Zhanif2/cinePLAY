@@ -1,13 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const MoviePoster = ({ movie }) => {
+const MoviePoster = ({ movie = {}, addToFavourites, favourites = [] }) => {
   const [isFavourite, setIsFavourite] = useState(false);
+
+  useEffect(() => {
+    const isMovieFavourite = favourites.some(favMovie => favMovie.id === movie.id);
+    setIsFavourite(isMovieFavourite);
+  }, [favourites, movie.id]);
 
   const toggleFavourite = (e) => {
     e.preventDefault();
-    setIsFavourite(!isFavourite);
+
+    if (isFavourite) {
+      console.log(`${movie.title} is already favourited`);
+      return;
+    }
+
+    setIsFavourite(true);
+    addToFavourites(movie); 
+    console.log(`${movie.title} has been added to favourites`);
   };
 
   return (
@@ -22,18 +35,16 @@ const MoviePoster = ({ movie }) => {
           <div className="overlay">
             <div onClick={toggleFavourite} className="heart__icon">
               {isFavourite ? (
-                <FontAwesomeIcon icon={'heart'} className="colored__heart"/> 
+                <FontAwesomeIcon icon="heart" className="colored__heart" /> 
               ) : (
                 <FontAwesomeIcon icon={['far', 'heart']} className="reg__heart" />
               )}
             </div>
           </div>
         </figure>
-      
-
-      <div className="movies__title">
-        {movie.title}
-      </div>
+        <div className="movies__title">
+          {movie.title}
+        </div>
       </Link>
     </div>
   );
