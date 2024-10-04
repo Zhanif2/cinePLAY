@@ -12,7 +12,7 @@ function App() {
   const location = useLocation();
   const [favourites, setFavourites] = useState([]);
 
-  const addToFavourites = (movie) => {
+  function addToFavourites (movie) {
     if (!favourites.some(favMovie => favMovie.id === movie.id)) {
       setFavourites(prevFavourites => [...prevFavourites, movie]);
     }
@@ -21,6 +21,14 @@ function App() {
   useEffect(() => {
     console.log("Updated favourites:", favourites);
   }, [favourites]);
+
+
+  function removeMovie(movie) {
+    setFavourites(prevFavourites => 
+      prevFavourites.filter(favMovie => favMovie.id !== movie.id)
+    );
+  }
+  
 
   return (
     <>
@@ -33,9 +41,9 @@ function App() {
         >
           <Routes location={location}>
             <Route path="/" element={<Home />} />
-            <Route path="/main" element={<Main addToFavourites={addToFavourites} favourites={favourites} />} />
+            <Route path="/main" element={<Main addToFavourites={addToFavourites} favourites={favourites} removeMovie={removeMovie}/>} />
             <Route path="/movie-info/:id" element={<MovieInfo addToFavourites={addToFavourites} favourites={favourites} />} />
-            <Route path="/favourites" element={<Favourites favourites={favourites} />} />
+            <Route path="/favourites" element={<Favourites favourites={favourites} removeMovie={removeMovie}/>} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>

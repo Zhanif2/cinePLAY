@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
-import Favourites from "./Favourites";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const MovieInfo = ({ addToFavourites, favourites }) => {
   const location = useLocation();
   const { movie } = location.state || {};
+
+  // Check if movie data is available
   if (!movie) {
     console.log("No movie data available");
     return <p>Movie not found.</p>;
@@ -15,9 +16,10 @@ const MovieInfo = ({ addToFavourites, favourites }) => {
     addToFavourites(movie);
   }
 
-  function movieExistInFavourites(){
-   return favourites.some(favMovie => +favMovie.id === +movie.id);
+  function movieExistInFavourites() {
+    return favourites.some(favMovie => favMovie.id === movie.id);
   }
+
   return (
     <>
       <div id="movies__body">
@@ -60,9 +62,11 @@ const MovieInfo = ({ addToFavourites, favourites }) => {
                     </div>
                   </div>
                   {movieExistInFavourites() ? (
-                    <button className="movie__info--btn btn">
-                      View Favourites{" "}
-                    </button>
+                    <Link to='/favourites'>
+                      <button className="movie__info--btn btn">
+                        View Favourites
+                      </button>
+                    </Link>
                   ) : (
                     <button
                       className="movie__info--btn btn"

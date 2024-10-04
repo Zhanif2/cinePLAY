@@ -14,7 +14,7 @@ function Footer() {
                 <Link to='/Main'>
                 <div className="footer__link">Popular</div>
                 </Link>
-                <Link to='/favourite'>
+                <Link to='/favourites'>
                 <div className="footer__link">Favourites</div>
                 </Link>
                 <div className="footer__link no__cursor">Contact</div>

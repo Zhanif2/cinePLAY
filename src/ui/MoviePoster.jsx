@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const MoviePoster = ({ movie = {}, addToFavourites, favourites = [] }) => {
+const MoviePoster = ({ movie = {}, addToFavourites, removeMovie, favourites = [] }) => {
   const [isFavourite, setIsFavourite] = useState(false);
 
   useEffect(() => {
@@ -14,13 +14,15 @@ const MoviePoster = ({ movie = {}, addToFavourites, favourites = [] }) => {
     e.preventDefault();
 
     if (isFavourite) {
-      console.log(`${movie.title} is already favourited`);
-      return;
+      removeMovie(movie);
+      setIsFavourite(false);
+      console.log(`${movie.title} has been removed from favourites`);
+    } 
+    else {
+      setIsFavourite(true);
+      addToFavourites(movie); 
+      console.log(`${movie.title} has been added to favourites`);
     }
-
-    setIsFavourite(true);
-    addToFavourites(movie); 
-    console.log(`${movie.title} has been added to favourites`);
   };
 
   return (
