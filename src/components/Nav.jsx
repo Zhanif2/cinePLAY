@@ -3,6 +3,12 @@ import React from 'react'
 import logo from '../assets/logo.png'
 import { Link } from 'react-router-dom'
 const Nav = () => {
+  function openMenu (){
+    document.body.classList += " menu--open";
+}
+function closeMenu (){
+    document.body.classList.remove("menu--open");
+}
   return (
     <>
       <div className="nav__container">
@@ -19,7 +25,7 @@ const Nav = () => {
             <li className="nav__list">
                 <a href="" className='nav__link underline no__cursor'>Contact</a>
             </li>
-            <button className='btn__menu'>
+            <button className='btn__menu' onClick={openMenu}>
                 <FontAwesomeIcon icon='bars'/>
             </button>
             <li className="nav__icon">
@@ -29,7 +35,7 @@ const Nav = () => {
             </li>
         </ul>
         <div className="menu__backdrop">
-          <button className="btn__menu btn__menu--close">
+          <button className="btn__menu btn__menu--close" onClick={closeMenu}>
             <FontAwesomeIcon icon='times'/>
           </button>
           <ul className="menu__links">
