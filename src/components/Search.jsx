@@ -18,7 +18,7 @@ const Search = ({ searchTerm, setSearchTerm, onSearch }) => {
               placeholder='Search'
               value={searchTerm}
               onChange={(event) => setSearchTerm(event.target.value)}
-              onKeyDown={(event) => {
+              onKeyUp={(event) => {
                 if (event.key === 'Enter') {
                   event.preventDefault(); 
                   onSearch(); 
