@@ -1,8 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Search = ({ searchTerm, setSearchTerm, onSearch }) => {
+  const [timer, setTimer] = useState(null);
+
+  const handleKeyUp = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      if (timer) clearTimeout(timer);  // Clear previous timeout
+      setTimer(setTimeout(() => onSearch(), 300));  // Delay search by 300ms
+    }
+  };
+
   return (
     <div className='row'>
       <div className='search__container'>
@@ -18,12 +28,7 @@ const Search = ({ searchTerm, setSearchTerm, onSearch }) => {
               placeholder='Search'
               value={searchTerm}
               onChange={(event) => setSearchTerm(event.target.value)}
-              onKeyUp={(event) => {
-                if (event.key === 'Enter') {
-                  event.preventDefault(); 
-                  onSearch(); 
-                }
-              }} 
+              onKeyUp={handleKeyUp} 
             />
             <FontAwesomeIcon 
               icon='fa-search' 
@@ -36,5 +41,6 @@ const Search = ({ searchTerm, setSearchTerm, onSearch }) => {
     </div>
   );
 }
+
 
 export default Search;
